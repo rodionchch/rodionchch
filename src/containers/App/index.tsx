@@ -32,7 +32,9 @@ const App = () => {
   return (
     <ThemeProvider theme={myTheme}>
       <GlobalStyle />
-      <s.App>{startGame ? <Game /> : <Login />}</s.App>
+      <s.App>
+        <s.AppInner>{startGame ? <Game /> : <Login />}</s.AppInner>
+      </s.App>
       {startGame && <s.Stopwatch>{stopwatch}</s.Stopwatch>}
     </ThemeProvider>
   );
